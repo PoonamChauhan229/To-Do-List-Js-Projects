@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>To-Do App</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <h1>🌙 Dark To-Do List</h1>
+    <div class="todo-form">
+      <input type="text" id="todo-input" placeholder="Add new task..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="setFilter('all')" id="filter-all" class="active">All</button>
+      <button onclick="setFilter('pending')" id="filter-pending">Pending</button>
+      <button onclick="setFilter('completed')" id="filter-completed">Completed</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div class="summary">
+      <span>Total: <span id="total">0</span></span>
+      <span>Pending: <span id="pending">0</span></span>
+      <span>Completed: <span id="completed">0</span></span>
+    </div>
+  </div>
+
+ <script src="./script.js"></script>
+</body>
+</html>
