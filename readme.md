@@ -107,7 +107,7 @@ To-Do-List-Js-Projects/
 
 ## CSS Styles
 
-## GLOBAL RESET AND BOX MODEL
+### `GLOBAL RESET AND BOX MODEL `
     - Removes default spacing added by browsers.
     - Sets box-sizing to border-box so padding and border are included in element's total size.
 
@@ -118,7 +118,7 @@ To-Do-List-Js-Projects/
         box-sizing: border-box;
     }
 ```
-## BODY STYLING
+## `BODY STYLING `
    - Applies a dark background for a modern, sleek look.
    - Sets a clean and readable font.
    - Adds padding around the page for spacing.
@@ -132,7 +132,7 @@ To-Do-List-Js-Projects/
         padding: 20px;
     }
 ```
-## MAIN CONTAINER
+## `MAIN CONTAINER`
    - Wraps the entire app content.
    - Centers it horizontally using margin: auto.
    - Applies a dark card-like background with padding.
@@ -150,7 +150,7 @@ To-Do-List-Js-Projects/
 ```
 
 
-##  HEADING / TITLE
+##  `HEADING / TITLE`
    - Centers the to-do list title.
    - Adds spacing below.
    - Uses a bright blue color for visibility.
@@ -163,7 +163,7 @@ To-Do-List-Js-Projects/
         }
 ```
 
-##   FORM LAYOUT (Input + Button)
+##   `FORM LAYOUT (Input + Button)`
    - Displays the input and add button side-by-side.
    - Adds spacing between them and below.
 
@@ -175,12 +175,12 @@ To-Do-List-Js-Projects/
     }
 ```
 
-### INPUT FIELD STYLING
-
+### `INPUT FIELD STYLING`
 - Expands to fill available width.
 - Adds internal padding for better text spacing.
 - Removes borders and applies a dark background.
-- Makes text white for better readability.
+- Makes text white for better readability.`
+
 ```css
 .todo-form input {
   flex: 1;
@@ -193,7 +193,7 @@ To-Do-List-Js-Projects/
 }
 ```
 
-### ADD BUTTON STYLING
+### `ADD BUTTON STYLING`
    - Gives the button a standout blue background.
    - Adds padding for better click area.
    - Removes border, changes cursor on hover.
@@ -211,7 +211,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-### FILTER BUTTON GROUP
+### `FILTER BUTTON GROUP`
    - Horizontally centers the filter buttons.
    - Adds spacing between and around them.
 ```css
@@ -223,7 +223,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-## FILTER BUTTONS DEFAULT
+## `FILTER BUTTONS DEFAULT`
    - Gives each filter a dark background.
    - Sets light text for readability.
    - Rounded edges and pointer cursor.
@@ -240,7 +240,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-###  ACTIVE FILTER BUTTON
+###  `ACTIVE FILTER BUTTON`
    - Highlights the currently selected filter.
    - Changes background to blue and text to black.
 
@@ -251,7 +251,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-### TO-DO LIST STYLING
+### `TO-DO LIST STYLING`
    - Removes bullet points from the list.
    - Adds margin at the top for spacing.
 
@@ -261,7 +261,7 @@ To-Do-List-Js-Projects/
         margin-top: 10px;
     }
 ```
-### INDIVIDUAL TO-DO ITEM
+### `INDIVIDUAL TO-DO ITEM`
    - Creates a card-like layout for each task.
    - Adds padding, border, and background.
    - Uses flexbox to space out task text and buttons.
@@ -279,7 +279,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-### COMPLETED TASKS
+### `COMPLETED TASKS`
    - Adds strikethrough text effect.
    - Changes background to indicate completion.
 
@@ -289,7 +289,7 @@ To-Do-List-Js-Projects/
   background-color: #1c3c3c;
 }
 ```
-### ACTION BUTTON GROUP
+### `ACTION BUTTON GROUP`
    - Aligns buttons (like complete and delete) horizontally.
    - Adds spacing between them.
 
@@ -300,7 +300,7 @@ To-Do-List-Js-Projects/
 }
 ```
 
-### ACTION BUTTONS
+### `ACTION BUTTONS`
    - No background or border to blend with design.
    - Uses icons or text with bright color.
    - Enlarged font for better visibility.
@@ -314,7 +314,7 @@ To-Do-List-Js-Projects/
     }
 ```
 
-###  TASK SUMMARY
+###  `TASK SUMMARY`
    - Displays total tasks and completed tasks.
    - Adds spacing from the list.
    - Uses lighter color for subtle info.
