@@ -7,6 +7,8 @@ This project is a **simple yet functional To-Do List app** built using HTML, CSS
 It’s perfect for beginners who want to learn how to **manipulate the DOM**, **handle events**, and **apply basic styling** to create a user-friendly web application. In this post, we’ll break down the code structure, explain each section, and offer ideas for enhancement.
 
 ---
+### 🔗 GitHub Source Code: https://github.com/PoonamChauhan229/To-Do-List-Js-Projects
+### 🌐 Live Demo: https://poonamchauhan229.github.io/To-Do-List-Js-Projects/
 
 ## 📁 Project Structure
 
@@ -21,32 +23,83 @@ To-Do-List-Js-Projects/
 
 ## 🔧 index.html – Layout and Structure
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="todo-container">
-    <h1>To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Add a new task..." />
-    <button onclick="addTask()">Add</button>
-    <ul id="taskList"></ul>
-  </div>
-  <script src="script.js"></script>
-</body>
-</html>
-```
+---
+### `<body>` and `.container` Wrapper
 
-### ✅ Explanation:
-- The `<input>` field allows users to type a task.
-- The `<button>` triggers the `addTask()` function when clicked.
-- The `<ul>` list displays all added tasks dynamically.
-- External stylesheet and script are linked.
+```
+<body>
+  <div class="container">
+```
+- The `<body>` tag contains all visible content on the page.  
+- The `.container` class wraps all content in a styled layout.
+
+---
+
+### Heading - Main Title
+
+```
+<h1>To-Do List</h1>
+```
+- Displays the main heading/title of the application.
+
+---
+
+### `.todo-form` - Input & Add Button
+
+```
+<div class="todo-form">
+  <input type="text" id="todo-input" placeholder="Add new task..." />
+  <button onclick="addTask()">Add</button>
+</div>
+```
+- An input field for entering a new task.  
+- A button to add the task which triggers the `addTask()` function defined in `script.js`.
+
+---
+
+### `.filters` - Filter Buttons
+
+```
+<div class="filters">
+  <button onclick="setFilter('all')" id="filter-all" class="active">All</button>
+  <button onclick="setFilter('pending')" id="filter-pending">Pending</button>
+  <button onclick="setFilter('completed')" id="filter-completed">Completed</button>
+</div>
+```
+- Provides buttons to filter tasks.  
+- Each button calls the `setFilter()` function with a corresponding filter type.
+
+---
+
+### `<ul id="todo-list">` - Task List
+
+```
+<ul id="todo-list"></ul>
+```
+- An empty unordered list where tasks will be dynamically added using JavaScript.
+
+---
+
+### `.summary` - Task Counters
+
+```
+<div class="summary">
+  <span>Total: <span id="total">0</span></span>
+  <span>Pending: <span id="pending">0</span></span>
+  <span>Completed: <span id="completed">0</span></span>
+</div>
+```
+- Displays real-time task statistics: total, pending, and completed.  
+- Each value is updated dynamically via JavaScript.
+
+---
+
+### `<script>` - JavaScript File
+
+```
+<script src="./script.js"></script>
+```
+- Loads the `script.js` file which contains the logic for managing tasks.
 
 ---
 
@@ -140,226 +193,140 @@ To-Do-List-Js-Projects/
 }
 ```
 
-/* =============================
-   ADD BUTTON STYLING
-   --------------------------------
+### ADD BUTTON STYLING
    - Gives the button a standout blue background.
    - Adds padding for better click area.
    - Removes border, changes cursor on hover.
    - Uses bold text to highlight action.
-============================= */
-.todo-form button {
-  padding: 10px 16px;
-  background-color: #00d9ff;
-  border: none;
-  color: black;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
 
-/* =============================
-   FILTER BUTTON GROUP
-   --------------------------------
+```css
+    .todo-form button {
+        padding: 10px 16px;
+        background-color: #00d9ff;
+        border: none;
+        color: black;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+```
+
+### FILTER BUTTON GROUP
    - Horizontally centers the filter buttons.
    - Adds spacing between and around them.
-============================= */
-.filters {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin: 15px 0;
-}
+```css
+    .filters {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin: 15px 0;
+    }
+```
 
-/* =============================
-   FILTER BUTTONS DEFAULT
-   --------------------------------
+## FILTER BUTTONS DEFAULT
    - Gives each filter a dark background.
    - Sets light text for readability.
    - Rounded edges and pointer cursor.
-============================= */
-.filters button {
-  padding: 6px 12px;
-  background-color: #2a2a2a;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #ccc;
-  font-weight: 500;
-}
 
-/* =============================
-   ACTIVE FILTER BUTTON
-   --------------------------------
+```css
+    .filters button {
+        padding: 6px 12px;
+        background-color: #2a2a2a;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #ccc;
+        font-weight: 500;
+    }
+```
+
+###  ACTIVE FILTER BUTTON
    - Highlights the currently selected filter.
    - Changes background to blue and text to black.
-============================= */
-.filters button.active {
-  background-color: #00d9ff;
-  color: black;
-}
 
-/* =============================
-   TO-DO LIST STYLING
-   --------------------------------
+```css
+    .filters button.active {
+        background-color: #00d9ff;
+        color: black;
+    }
+```
+
+### TO-DO LIST STYLING
    - Removes bullet points from the list.
    - Adds margin at the top for spacing.
-============================= */
-#todo-list {
-  list-style: none;
-  margin-top: 10px;
-}
 
-/* =============================
-   INDIVIDUAL TO-DO ITEM
-   --------------------------------
+```css
+    #todo-list {
+        list-style: none;
+        margin-top: 10px;
+    }
+```
+### INDIVIDUAL TO-DO ITEM
    - Creates a card-like layout for each task.
    - Adds padding, border, and background.
    - Uses flexbox to space out task text and buttons.
    - Rounded corners and margin between tasks.
-============================= */
-.todo-item {
-  padding: 10px 12px;
-  border: 1px solid #333;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-  background-color: #2a2a2a;
-}
 
-/* =============================
-   COMPLETED TASKS
-   --------------------------------
+```css
+    .todo-item {
+        padding: 10px 12px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        background-color: #2a2a2a;
+    }
+```
+
+### COMPLETED TASKS
    - Adds strikethrough text effect.
    - Changes background to indicate completion.
-============================= */
+
+```css
 .todo-item.completed {
   text-decoration: line-through;
   background-color: #1c3c3c;
 }
-
-/* =============================
-   ACTION BUTTON GROUP
-   --------------------------------
+```
+### ACTION BUTTON GROUP
    - Aligns buttons (like complete and delete) horizontally.
    - Adds spacing between them.
-============================= */
+
+```css
 .todo-actions {
   display: flex;
   gap: 10px;
 }
+```
 
-/* =============================
-   ACTION BUTTONS
-   --------------------------------
+### ACTION BUTTONS
    - No background or border to blend with design.
    - Uses icons or text with bright color.
    - Enlarged font for better visibility.
-============================= */
-.todo-actions button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #00d9ff;
-  font-size: 16px;
-}
+```css
+    .todo-actions button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #00d9ff;
+        font-size: 16px;
+    }
+```
 
-/* =============================
-   TASK SUMMARY
-   --------------------------------
+###  TASK SUMMARY
    - Displays total tasks and completed tasks.
    - Adds spacing from the list.
    - Uses lighter color for subtle info.
-============================= */
-.summary {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #aaa;
-}
-
-
-### 🎨Centers the app and sets a clean background.
 
 ```css
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-```
-### 🎨 Creates a neat card-style container.
-
-```css
-.todo-container {
-  width: 300px;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-```
-### 🎨 Ensures responsive design for inputs and buttons.
-
-```css
-input[type="text"], button {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-```
-
-### 🎨 Adds hover effect and consistent button style.
-
-```css
-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #218838;
-}
-```
-### 🎨 Structures tasks with spacing and styles.
-
-```css
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  padding: 10px;
-  margin-bottom: 5px;
-  background-color: #eee;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 5px;
-}
-```
-### 🎨Visually marks completed tasks.
-
-```css
-.completed {
-  text-decoration: line-through;
-  color: gray;
-}
-```
-
-### 🎨Makes delete button prominent and interactive.
-
-```css
-.delete {
-  cursor: pointer;
-  color: red;
-}
+    .summary {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #aaa;
+    }
 ```
 ---
 
