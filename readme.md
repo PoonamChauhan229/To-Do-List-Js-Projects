@@ -88,6 +88,7 @@ input[type="text"], button {
 ```
 
 ### 🎨 Adds hover effect and consistent button style.
+
 ```css
 button {
   background-color: #28a745;
