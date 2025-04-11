@@ -54,84 +54,81 @@ To-Do-List-Js-Projects/
 
 ## CSS Styles
 
-```css
-/* =============================
-   GLOBAL RESET AND BOX MODEL
-   --------------------------------
-   - Removes default spacing added by browsers.
-   - Sets box-sizing to border-box so padding and border are included in element's total size.
-============================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+## GLOBAL RESET AND BOX MODEL
+    - Removes default spacing added by browsers.
+    - Sets box-sizing to border-box so padding and border are included in element's total size.
 
-/* =============================
-   BODY STYLING
-   --------------------------------
+```css
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+```
+## BODY STYLING
    - Applies a dark background for a modern, sleek look.
    - Sets a clean and readable font.
    - Adds padding around the page for spacing.
    - Sets light text for contrast against the dark background.
-============================= */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #121212;
-  color: #f1f1f1;
-  padding: 20px;
-}
 
-/* =============================
-   MAIN CONTAINER
-   --------------------------------
+```css
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #121212;
+        color: #f1f1f1;
+        padding: 20px;
+    }
+```
+## MAIN CONTAINER
    - Wraps the entire app content.
    - Centers it horizontally using margin: auto.
    - Applies a dark card-like background with padding.
    - Adds rounded corners and a subtle glowing shadow.
-============================= */
-.container {
-  max-width: 500px;
-  margin: auto;
-  background-color: #1e1e1e;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-}
 
-/* =============================
-   HEADING / TITLE
-   --------------------------------
+```css
+    .container {
+        max-width: 500px;
+        margin: auto;
+        background-color: #1e1e1e;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    }
+```
+
+
+##  HEADING / TITLE
    - Centers the to-do list title.
    - Adds spacing below.
    - Uses a bright blue color for visibility.
-============================= */
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00d9ff;
-}
 
-/* =============================
-   FORM LAYOUT (Input + Button)
-   --------------------------------
+```css
+        h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #00d9ff;
+        }
+```
+
+##   FORM LAYOUT (Input + Button)
    - Displays the input and add button side-by-side.
    - Adds spacing between them and below.
-============================= */
-.todo-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-}
 
-/* =============================
-   INPUT FIELD STYLING
-   --------------------------------
-   - Expands to fill available width.
-   - Adds internal padding for better text spacing.
-   - Removes borders and applies a dark background.
-   - Makes text white for better readability.
-============================= */
+```css
+    .todo-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+```
+
+### INPUT FIELD STYLING
+
+- Expands to fill available width.
+- Adds internal padding for better text spacing.
+- Removes borders and applies a dark background.
+- Makes text white for better readability.
+```css
 .todo-form input {
   flex: 1;
   padding: 10px;
@@ -141,6 +138,7 @@ h1 {
   background-color: #2a2a2a;
   color: white;
 }
+```
 
 /* =============================
    ADD BUTTON STYLING
