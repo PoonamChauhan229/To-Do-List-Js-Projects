@@ -53,6 +53,8 @@ To-Do-List-Js-Projects/
 
 ## 🎨 style.css – Styling the Application
 
+### 🎨Centers the app and sets a clean background.
+
 ```css
 body {
   font-family: Arial, sans-serif;
@@ -62,7 +64,10 @@ body {
   align-items: center;
   height: 100vh;
 }
+```
+### 🎨 Creates a neat card-style container.
 
+```css
 .todo-container {
   width: 300px;
   padding: 20px;
@@ -70,14 +75,20 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+```
+### 🎨 Ensures responsive design for inputs and buttons.
 
+```css
 input[type="text"], button {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
 }
+```
 
+### 🎨 Adds hover effect and consistent button style.
+```css
 button {
   background-color: #28a745;
   color: white;
@@ -87,7 +98,10 @@ button {
 button:hover {
   background-color: #218838;
 }
+``
+### 🎨 Structures tasks with spacing and styles.
 
+```css
 ul {
   list-style: none;
   padding: 0;
@@ -100,21 +114,29 @@ li {
   justify-content: space-between;
   border-radius: 5px;
 }
+```
+### 🎨Visually marks completed tasks.
 
+```css
 .completed {
   text-decoration: line-through;
   color: gray;
 }
+```
 
+### 🎨Makes delete button prominent and interactive.
+
+```css
 .delete {
   cursor: pointer;
   color: red;
 }
 ```
-
 ---
 
 ## 🧠 script.js – JavaScript Functionality
+
+### Grabs input text and prevents blank tasks.
 
 ```js
 function addTask() {
