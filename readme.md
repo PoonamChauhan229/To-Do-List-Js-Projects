@@ -105,8 +105,6 @@ To-Do-List-Js-Projects/
 
 ## 🎨 style.css – Styling the Application
 
-## CSS Styles
-
 ### `GLOBAL RESET AND BOX MODEL `
     - Removes default spacing added by browsers.
     - Sets box-sizing to border-box so padding and border are included in element's total size.
